@@ -1,0 +1,168 @@
+body{
+    background-color:#F5F5FB !important;
+
+}
+
+.new-account{
+    position: relative;
+    width: 1440px !important;
+    height: 912px;
+    background: #F5F5FB;
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+}
+
+.content-box{
+    position: absolute !important;
+    width: 515px !important;
+    height: 740px !important;
+    left: 462px !important;
+    top: 80px !important;
+    background: #FFFFFF !important;
+    border: 3px solid #F2F2F2 !important;
+    box-sizing: border-box !important;
+    max-width:100% !important;
+
+}
+
+.logotype{
+    left: 22%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
+
+.heading-small{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 5px;
+    margin-bottom:9%;
+
+}
+
+.heading-small h3{
+
+    font-family: SF Pro Text !important;
+    font-size: 22px !important;
+    line-height: 32px !important;
+    text-align: center !important;
+    color: #312F4F;
+    /* color:pink */
+}
+
+.input-box {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-right: 7%;
+    margin-bottom:18%;
+
+}
+
+.input-box  input{
+    position: absolute;
+    width: 375px;
+    height:44px;
+    left: 0%;
+    right: 0%;
+    top: 33.33%;
+    bottom: 0%;
+    background: #FFFFFF;
+    border: 1px solid #B6B9D0;
+    box-sizing: border-box;
+    box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.05);
+}
+
+.input-box label {
+
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 78.79%;
+    font-family: SF Pro Text !important;
+    font-size: 16px;
+    line-height: 19px;
+    color: #696D8C;
+}
+
+.password-indicator {
+
+    width:380.67px !important;
+    margin-right: 0% !important;
+    margin-left:0 !important;
+
+}
+
+.col-sm-indicator{
+    -ms-flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    width: 122.67px !important;
+    margin:2px !important;
+    
+}
+
+.indicator {
+    margin:auto;
+    height: 8px !important;
+    background: #EAEAF4;
+    border-radius: 10px;
+}
+
+#password-box { 
+    margin-bottom: 10%;
+}
+
+.ul-group { 
+    margin-right: 35% !important;
+
+}
+
+ul {
+    list-style: none; 
+}
+
+ul li::before {
+    content: "\2022";  
+    color:#EAEAF4; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -2em; 
+    margin-right:-7px;
+    font-size:22px;   
+}
+
+
+li {
+    margin-left: 10%;
+    font-family: SF Pro Text;
+    font-size: 16px;
+    line-height: 26px;
+    color: #696D8C;
+
+}
+
+#password-confirmation-box{
+    margin-top:6%;
+}
+
+button { 
+    width:376px !important;
+    background:#17D499 !important;
+    border-color: #17d499 !important;
+    border-radius:0 !important;
+
+}
+
+.button-text { 
+    font-family: SF Pro Text;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    font-weight: bold;
+}
