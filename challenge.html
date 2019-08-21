@@ -32,11 +32,11 @@
                             </h3>
                         </div>
                         <div class='w-100'></div>
-                        <div class='col-sm-8  input-box'>
+                        <div class='col-sm-8  input-box' id='name-box'>
                             <label for='name'>Nome Completo </label>
                             <input type='text' name='name' id='name'> 
                         </div>
-                        <div class='col-sm-8 input-box'>
+                        <div class='col-sm-8 input-box' >
                             <label for='email'>Email </label>
                             <input type='text' name='email' id='email'> 
                         </div>
@@ -54,20 +54,20 @@
                         </div>
                         <div class=' ul-group'>
                             <ul>
-                                <li class='col-sm-12 align-self-start'>
+                                <li id='firstCondition' class='col-sm-12 align-self-start'>
                                     Pelo menos 6 caracteres
                                 </li>
-                                <li class='col-sm-12 align-self-start'>
+                                <li id='secondCondition' class='col-sm-12 align-self-start'>
                                     Pelo menos 1 letra maiúscula
                                 </li>
-                                <li class='col-sm-12 align-self-start'>
+                                <li id='thirdCondition' class='col-sm-12 align-self-start'>
                                     Pelo menos 1 número
                                 </li>
                             </ul>
                         </div>
                         <div class='col-sm-8 input-box' id='password-confirmation-box'>
                                 <label for='password-confirmation'>Confirme sua senha</label>
-                                <input type='password' name='password-confirmation' id='password'> 
+                                <input type='password' name='password-confirmation' id='passwordConfirmation'> 
                         </div>
                         <div class='button-holder'>
                             <button type="button" class="btn btn-success btn-lg btn-block"><span class='button-text'>Criar conta </span></button>
@@ -77,6 +77,6 @@
             </div>
         </div>
         
-        <script src="" async defer></script>
+        <script src="/challenge.js" async defer></script>
     </body>
 </html>
