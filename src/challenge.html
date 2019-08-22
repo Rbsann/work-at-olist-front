@@ -7,8 +7,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- TODO replace with flask dynamic link to compiled sass !-->
-        <link rel="stylesheet" href="/mock.css">
+        <link rel='stylesheet' href="{{ url_for('static', filename='mock.css') }}" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     </head>
     <body>
@@ -70,13 +71,13 @@
                                 <input type='password' name='password-confirmation' id='passwordConfirmation'> 
                         </div>
                         <div class='button-holder'>
-                            <button type="button" class="btn btn-success btn-lg btn-block"><span class='button-text'>Criar conta </span></button>
+                            <button id='confirmButton' type="button" class="btn btn-success btn-lg btn-block" disabled='disabled'><span id ='button-text' class='button-text'>Criar conta </span></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <script src="/challenge.js" async defer></script>
+        <script src="{{url_for('static', filename='challenge.js')}}" async defer></script>
     </body>
 </html>

@@ -1,5 +1,8 @@
 let passwordSteps = [];
 let validationSteps = [];
+let password;
+
+
 
 //functions checkname controls name input validation
 function checkName() {
@@ -31,8 +34,8 @@ function checkEmail() {
 function checkPassword(){
     let passRegex =  "[A-Z]";
     let passNumberRegex = "[0-9]";
+    password = this.value;
     if(this.value.length>=6){
-        console.log('sklskljs');
         document.getElementById('firstCondition').classList.add('bulletColor');
         checkPasswordConditions('add','firstCondition');
     }else if(this.value.length<6){
@@ -50,6 +53,16 @@ function checkPassword(){
     }else{
         document.getElementById('thirdCondition').classList.remove('bulletColor');
         checkPasswordConditions('remove','thirdCondition');
+    }
+}
+
+function confirmPassword() {
+    if(password==this.value){
+        document.getElementById('passwordConfirmation').style.border = "1px solid #6ce2bd";
+        checkValidationsSteps('add','confirmedPassword')
+    }else{
+        document.getElementById('passwordConfirmation').style.border = "1px solid #B6B9D0";
+        checkValidationsSteps('remove','confirmedPassword')
     }
 }
 
@@ -72,21 +85,25 @@ function checkConditionsQty(){
         document.getElementById('indicator1').style.background = "#EaEaf4"
         document.getElementById('indicator2').style.background = "#EaEaf4"
         document.getElementById('indicator3').style.background = "#EaEaf4"
+        document.getElementById('password').style.border = "1px solid #B6B9D0"
         checkValidationsSteps("remove","password")
     }else if(passwordSteps.length===1){
         document.getElementById('indicator1').style.background = "#f78692";
         document.getElementById('indicator2').style.background = "#EaEaf4"
         document.getElementById('indicator3').style.background = "#EaEaf4"
+        document.getElementById('password').style.border = "1px solid #B6B9D0"
         checkValidationsSteps("remove","password")
     }else if(passwordSteps.length===2){
         document.getElementById('indicator1').style.background = "#f7bc1c"
         document.getElementById('indicator2').style.background = "#f7bc1c"
         document.getElementById('indicator3').style.background = "#EaEaf4"
+        document.getElementById('password').style.border = "1px solid #B6B9D0"
         checkValidationsSteps("remove","password")
     }else if(passwordSteps.length===3){
         document.getElementById('indicator1').style.background = "#1fe6a8";
         document.getElementById('indicator2').style.background = "#1fe6a8";
         document.getElementById('indicator3').style.background = "#1fe6a8";
+        document.getElementById('password').style.border = "1px solid #6ce2bd"
         checkValidationsSteps("add","password")
     }
     
@@ -102,7 +119,9 @@ function checkValidationsSteps(method,input){
         if(method==='add'){
             validationSteps.push(input);
             if(validationSteps.length==4){
-                console.log('button able');
+                document.getElementById('confirmButton').removeAttribute('disabled')
+            }else{
+                document.getElementById('confirmButton').setAttribute('disabled','disabled');
             }
         }else{
             validationSteps = validationSteps.filter(element=>element!=input);
@@ -111,8 +130,19 @@ function checkValidationsSteps(method,input){
     }
 }
 
+function sendForm() {
+    var element = document.getElementById('button-text');
+    var newEl = document.createElement('i');
+    newEl.classList.add("fa")
+    newEl.classList.add("fa-spinner")
+    newEl.classList.add('fa-spin')
+    element.parentNode.replaceChild(newEl,element);
+
+}
+
 document.getElementById('name').addEventListener('input',checkName);
 document.getElementById('email').addEventListener('input',checkEmail)
 document.getElementById('password').addEventListener('input',checkPassword)
-
+document.getElementById('passwordConfirmation').addEventListener('input',confirmPassword)
+document.getElementById('confirmButton').addEventListener('click',sendForm);
 
