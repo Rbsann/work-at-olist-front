@@ -1,6 +1,8 @@
 let passwordSteps = [];
 let validationSteps = [];
 let password;
+let user;
+let email;
 
 
 
@@ -10,6 +12,7 @@ function checkName() {
     if(this.value.length>0){
         document.getElementById('name').style.border = "1px solid #6ce2bd";
         checkValidationsSteps('add','name');
+        name =this.value;
     }else{
         console.log('name equals zero');
         document.getElementById('name').style.border = "1px solid #B6B9D0";
@@ -25,6 +28,7 @@ function checkEmail() {
     if(this.value.match(emailRegex)){
         document.getElementById('email').style.border = "1px solid #6ce2bd";
         checkValidationsSteps('add','email');
+        email = this.value;
     }else{
         document.getElementById('email').style.border = "1px solid #B6B9D0";
         checkValidationsSteps('remove','email');
@@ -60,6 +64,7 @@ function confirmPassword() {
     if(password==this.value){
         document.getElementById('passwordConfirmation').style.border = "1px solid #6ce2bd";
         checkValidationsSteps('add','confirmedPassword')
+        password = this.value
     }else{
         document.getElementById('passwordConfirmation').style.border = "1px solid #B6B9D0";
         checkValidationsSteps('remove','confirmedPassword')
@@ -105,6 +110,7 @@ function checkConditionsQty(){
         document.getElementById('indicator3').style.background = "#1fe6a8";
         document.getElementById('password').style.border = "1px solid #6ce2bd"
         checkValidationsSteps("add","password")
+        
     }
     
 
@@ -137,6 +143,20 @@ function sendForm() {
     newEl.classList.add("fa-spinner")
     newEl.classList.add('fa-spin')
     element.parentNode.replaceChild(newEl,element);
+    var data ={name,email,password};
+    $.ajax({
+        url: "/user",
+        type: "post",
+        data:JSON.stringify(data),
+        contentType: "application/json",
+        dataType: "json",
+        success:function(response){
+            console.log(response);
+            window.location.href = '/success'
+        }
+    });
+
+    console.log('sending')
 
 }
 
