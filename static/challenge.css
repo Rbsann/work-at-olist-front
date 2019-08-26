@@ -127,3 +127,33 @@ body {
           line-height: 26px;
           text-align: center;
           font-weight: bold; }
+
+          .check-icon-div {
+            left: 22%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin-top: 14%;
+            margin-bottom: 2%; }
+
+            .check {
+              margin-top: -17%;
+              margin-left: 8%; }
+
+              .success-title {
+                font: 22px SF Pro Text;
+                text-align: center;
+                line-height: 32px;
+                color: #312F4F;
+                font-weight: 501; }
+
+                .success-text {
+                  font: 16px SF Pro Text;
+                  font: 16px SF Pro Text;
+                  line-height: normal;
+                  text-align: center;
+                  line-height: 27px;
+                  color: #312F4F; }
+
+                  .success-column {
+                    margin-top: 5% !important; }

@@ -4,6 +4,7 @@ $check-color:#17D499;
 $indicator-color:#EAEAF4;
 $label-color:#696D8C;
 $font-stack:SF Pro Text;
+$success-color:#312F4F;
 
 
 body {
@@ -53,8 +54,8 @@ body {
     font:22px $font-stack !important;
     line-height: 32px !important;
     text-align: center !important;
-    color: #312F4F;
-    /* color:pink */
+    color:$success-color;
+    
   }
 }
 
@@ -156,4 +157,42 @@ button {
   line-height: 26px;
   text-align: center;
   font-weight: bold;
+}
+
+//success page css
+
+.check-icon-div{
+  left: 22%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  margin-top: 14%;
+  margin-bottom: 2%;
+
+}
+
+.check{
+  margin-top:-17%;
+  margin-left:8%;
+}
+
+.success-title{
+  font: 22px $font-stack;
+  text-align: center;
+  line-height: 32px;
+  color: $success-color;
+  font-weight: 501;
+}
+
+.success-text{
+  font: 16px $font-stack;
+  font: 16px $font-stack;
+  line-height: normal;
+  text-align: center;
+  line-height: 27px;
+  color:$success-color;
+}
+
+.success-column{
+  margin-top:5% !important;
 }
