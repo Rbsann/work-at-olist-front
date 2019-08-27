@@ -9,7 +9,6 @@ My personal entry for Olist challenge
 To install type pip3 install -r requirements.txt
 You need to have python3 installed on your environment. 
 
-## Developing
 
 ### Built With
 Built with vanilla js, css and html.Bootstrap is used sparingly.
@@ -27,7 +26,9 @@ All dependencies are listed on requirements.txt
 
 To get the entry running clone the repo, install the dependencies and run it with
 export FLASK_APP=olist.py
-python -m flask olist.py
+python3 -m flask olist.py
+
+Alternatively, when deploying to netlify , use python freeze.py. This bypass the need of configuring a web server like Nginx.
 
 
 
