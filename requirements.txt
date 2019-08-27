@@ -50,4 +50,3 @@ typed-ast==1.4.0
 urllib3==1.22
 Werkzeug==0.15.5
 wrapt==1.11.2
-xkit==0.0.0
