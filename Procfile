@@ -1,1 +1,1 @@
-web:gunicorn olist.py
+web: gunicorn olist:app
