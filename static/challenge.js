@@ -35,6 +35,8 @@ function checkEmail() {
     }
 }
 
+//check password conditions, one by one
+
 function checkPassword(){
     let passRegex =  "[A-Z]";
     let passNumberRegex = "[0-9]";
@@ -60,6 +62,8 @@ function checkPassword(){
     }
 }
 
+
+//check if confirmed password is the same as the previously typed password
 function confirmPassword() {
     if(password==this.value){
         document.getElementById('passwordConfirmation').style.border = "1px solid #6ce2bd";
@@ -70,6 +74,8 @@ function confirmPassword() {
         checkValidationsSteps('remove','confirmedPassword')
     }
 }
+
+//build password steps array
 
 function checkPasswordConditions(method,condition) {
     if(passwordSteps.includes(condition) && method!="remove"){
@@ -85,6 +91,7 @@ function checkPasswordConditions(method,condition) {
     }
 }
 
+//check if all conditions have passed the test.
 function checkConditionsQty(){
     if(passwordSteps.length===0){
         document.getElementById('indicator1').style.background = "#EaEaf4"
@@ -136,6 +143,9 @@ function checkValidationsSteps(method,input){
     }
 }
 
+
+// Function that goes beyond what is required on the challenged
+//Instead of simply redirecting to another page it sends a post request to a endpoint configured with python flask
 function sendForm() {
     var element = document.getElementById('button-text');
     var newEl = document.createElement('i');
@@ -160,6 +170,8 @@ function sendForm() {
 
 }
 
+
+//document element hooks
 document.getElementById('name').addEventListener('input',checkName);
 document.getElementById('email').addEventListener('input',checkEmail)
 document.getElementById('password').addEventListener('input',checkPassword)
