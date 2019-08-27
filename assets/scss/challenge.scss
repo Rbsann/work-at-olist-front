@@ -1,0 +1,198 @@
+$background-color:#F5F5FB ;
+$content-background-color:#FFFFFF;
+$check-color:#17D499;
+$indicator-color:#EAEAF4;
+$label-color:#696D8C;
+$font-stack:SF Pro Text;
+$success-color:#312F4F;
+
+
+body {
+  background-color: $background-color !important;
+}
+
+.new-account {
+  position: relative;
+  width: 1440px !important;
+  height: 912px;
+  background:$background-color;
+  margin-left: 0% !important;
+  margin-right: 0% !important;
+  padding-left: 0% !important;
+  padding-right: 0% !important;
+}
+
+.content-box {
+  position: absolute !important;
+  width: 515px !important;
+  height: 740px !important;
+  left: 462px !important;
+  top: 80px !important;
+  background: $content-background-color !important;
+  border: 3px solid #F2F2F2 !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+}
+
+.logotype {
+  left: 22%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+
+.heading-small {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 5px;
+  margin-bottom: 9%;
+  h3 {
+    font:22px $font-stack !important;
+    line-height: 32px !important;
+    text-align: center !important;
+    color:$success-color;
+    
+  }
+}
+
+.input-box {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-right: 7%;
+  margin-bottom: 18%;
+  input {
+    position: absolute;
+    width: 375px;
+    height: 44px;
+    left: 0%;
+    right: 0%;
+    top: 33.33%;
+    bottom: 0%;
+    background:$content-background-color;
+    border: 1px solid #B6B9D0;
+    box-sizing: border-box;
+    box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.05);
+  }
+  label {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 78.79%;
+    font:16px $font-stack !important;
+    line-height: 19px;
+    color:$label-color;
+  }
+}
+
+.password-indicator {
+  width: 380.67px !important;
+  margin-right: 0% !important;
+  margin-left: 0 !important;
+}
+
+.col-sm-indicator {
+  -ms-flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  width: 122.67px !important;
+  margin: 2px !important;
+}
+
+.indicator {
+  margin: auto;
+  height: 8px !important;
+  background: $indicator-color;
+  border-radius: 10px;
+}
+
+#password-box {
+  margin-bottom: 10%;
+}
+
+.ul-group {
+  margin-right: 35% !important;
+}
+
+ul {
+  list-style: none;
+  li::before {
+    content: "\2022";
+    color: $indicator-color;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -2em;
+    margin-right: -7px;
+    font-size: 22px;
+  }
+}
+
+.bulletColor::before {
+  color: $check-color !important;
+}
+
+li {
+  margin-left: 10%;
+  font:16px $font-stack !important;
+  line-height: 26px;
+  color: $label-color;
+}
+
+#password-confirmation-box {
+  margin-top: 6%;
+}
+
+button {
+  width: 376px !important;
+  background: $check-color !important;
+  border-color: $check-color !important;
+  border-radius: 0 !important;
+}
+
+.button-text {
+  font:16px $font-stack;
+  line-height: 26px;
+  text-align: center;
+  font-weight: bold;
+}
+
+//success page css
+
+.check-icon-div{
+  left: 22%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  margin-top: 14%;
+  margin-bottom: 2%;
+
+}
+
+.check{
+  margin-top:-17%;
+  margin-left:8%;
+}
+
+.success-title{
+  font: 22px $font-stack;
+  text-align: center;
+  line-height: 32px;
+  color: $success-color;
+  font-weight: 501;
+}
+
+.success-text{
+  font: 16px $font-stack;
+  font: 16px $font-stack;
+  line-height: normal;
+  text-align: center;
+  line-height: 27px;
+  color:$success-color;
+}
+
+.success-column{
+  margin-top:5% !important;
+}
